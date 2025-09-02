@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
+import habitRoutes from "./routes/habit.route.js";
 
 dotenv.config();
 
