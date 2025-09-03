@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser";
 import habitRoutes from "./routes/habit.route.js";
+import authRoutes from "./routes/auth.route.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/habit", habitRoutes);
+app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
   console.log("Server is running on port http://localhost:" + PORT);
